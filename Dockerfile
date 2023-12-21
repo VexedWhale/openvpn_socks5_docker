@@ -17,7 +17,7 @@ RUN echo 'set completion-ignore-case on' >> ~/.inputrc && \
     echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc && \
     echo "alias ls='ls $LS_OPTIONS'" >> ~/.bashrc && \
     echo ". ~/.bash_theme" >> ~/.bashrc && \
-    echo 'launch () { openvpn --config "$1" --daemon --ping-restart 5 --auth-user-pass pass.txt; sleep 3; danted -D; echo "Started $1"; }' >> ~/.bashrc && \
+    echo 'launch () { openvpn --config "$1" --daemon --ping-restart 5 --auth-user-pass pass.txt; sleep 10; danted -D; echo "Started $1"; }' >> ~/.bashrc && \
     echo "halt () { killall openvpn; killall danted; echo 'Stopped'; }" >> ~/.bashrc && \
     echo "Done"
 
