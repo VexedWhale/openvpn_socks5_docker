@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get install -y \
     openvpn \
     net-tools \
+    tinyproxy \
     dante-server \
     procps \
     sudo \
@@ -12,6 +13,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /var/log/danted/
+RUN mkdir /var/log/tinyproxy/
 
 RUN echo 'set completion-ignore-case on' >> ~/.inputrc && \
     echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc && \
