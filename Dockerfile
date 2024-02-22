@@ -13,7 +13,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /var/log/danted/
-RUN mkdir /var/log/tinyproxy/
 
 RUN echo 'set completion-ignore-case on' >> ~/.inputrc && \
     echo "export LS_OPTIONS='--color=auto'" >> ~/.bashrc && \
